@@ -11,6 +11,7 @@ import {
   Disc,
   Loader2,
 } from "lucide-react";
+import Ad from "@/app/components/Ad";
 
 type Song = {
   id: string;
@@ -178,6 +179,9 @@ export default function SongDetails() {
           </div>
         </div>
       </div>
+      <Ad slot="1589065178" format="auto" style={{ textAlign: "center" }} />
+      <Ad slot="9076080051" format="auto" style={{ textAlign: "center" }} />
+
     </div>
   );
 }

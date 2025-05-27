@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Ad from "./components/Ad";
 
 type Song = {
   id: string;
@@ -285,6 +286,9 @@ export default function Dashboard() {
           )}
         </>
       )}
+
+      {/* Ad before footer */}
+      <Ad slot="1589065178" format="auto" style={{ textAlign: "center" }} />
 
       {/* Footer */}
       <footer className="text-center mt-16 p-8 vintage-card rounded-lg">
