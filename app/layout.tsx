@@ -1,6 +1,7 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script"; 
 import "./globals.css";
 
 const inter = Inter({
@@ -24,6 +25,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="min-h-screen bg-vintage-paper">{children}</div>
+
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1231326966189682"
+          strategy="afterInteractive" // Loads after the page is interactive
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
