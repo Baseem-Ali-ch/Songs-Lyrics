@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --vintage-paper: #f4f1e8;
+    --vintage-brown: #8b4513;
+    --vintage-dark-brown: #654321;
+    --vintage-gold: #daa520;
+    --vintage-cream: #fff8dc;
+    --vintage-red: #a0522d;
+    --vintage-green: #556b2f;
+  }
+}
+
+@layer components {
+  .vintage-border {
+    border: 3px solid var(--vintage-brown);
+    border-image: repeating-linear-gradient(
+        45deg,
+        var(--vintage-brown),
+        var(--vintage-brown) 10px,
+        var(--vintage-gold) 10px,
+        var(--vintage-gold) 20px
+      )
+      3;
+  }
+
+  .vintage-card {
+    background: var(--vintage-cream);
+    border: 2px solid var(--vintage-brown);
+    box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .vintage-button {
+    background: linear-gradient(145deg, var(--vintage-gold), var(--vintage-brown));
+    border: 2px solid var(--vintage-dark-brown);
+    color: var(--vintage-cream);
+    font-family: "Courier New", "Monaco", monospace;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .vintage-button:hover {
+    background: linear-gradient(145deg, var(--vintage-brown), var(--vintage-gold));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .vintage-input {
+    background: var(--vintage-cream);
+    border: 2px solid var(--vintage-brown);
+    font-family: "Courier New", "Monaco", monospace;
+    box-shadow: inset 0 2px 4px rgba(139, 69, 19, 0.2);
+  }
+
+  .vintage-input:focus {
+    outline: none;
+    border-color: var(--vintage-gold);
+    box-shadow: inset 0 2px 4px rgba(139, 69, 19, 0.2), 0 0 0 3px rgba(218, 165, 32, 0.3);
+  }
+
+  .typewriter-text {
+    font-family: "Courier New", "Monaco", monospace;
+    background: var(--vintage-cream);
+    border-left: 3px solid var(--vintage-brown);
+    padding-left: 1rem;
+  }
+}
+
+body {
+  background-color: var(--vintage-paper);
+  background-image: radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(218, 165, 32, 0.1) 0%, transparent 50%);
+}
+
+.bg-vintage-paper {
+  background-color: var(--vintage-paper);
+}
+
+.text-vintage-brown {
+  color: var(--vintage-brown);
+}
+
+.text-vintage-gold {
+  color: var(--vintage-gold);
+}
+
+.border-vintage-brown {
+  border-color: var(--vintage-brown);
+}
